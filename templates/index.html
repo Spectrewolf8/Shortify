@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to URLShortener {% endblock %}</h1>
+    <h1>{% block title %} Welcome to Shortify, the EZ URL shrinker!! {% endblock %}</h1>
     <form method="post">
     <div class="form-group">
         <label for="url">URL</label>
         <input type="text" name="url"
-               placeholder="URL to shorten" class="form-control"
+               placeholder="URL to shrink" class="form-control"
                value="{{ request.form['url'] }}" autofocus></input>
     </div>
 
@@ -17,6 +17,6 @@
 
     {% if short_url %}
     <hr>
-    <span>{{ short_url }}</span>
+    <a href="{{ short_url }}" class="short-url">{{ short_url }}</a>
     {% endif %}
 {% endblock %}

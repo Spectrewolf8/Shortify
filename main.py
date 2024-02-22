@@ -18,9 +18,6 @@ app.config["MONGO_URI"] = config["PROD"]["DB_URI"]
 try:
     mongo = PyMongo(app)
     # MongoDB connection details (optional)
-    # print("MongoDB Server Info:", mongo.cx.server_info())
-    # print("MongDB connection status:", mongo.cx.get_database)
-    # print("Connected Database:", mongo.db)
 except ServerSelectionTimeoutError as e:
     print("Could not connect to MongoDB:", e)
 
@@ -104,7 +101,6 @@ def stats():
         }
         for url in db_urls
     ]
-    print(urls)
     return render_template("stats.html", urls=urls)
 
 
