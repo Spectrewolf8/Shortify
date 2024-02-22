@@ -8,17 +8,13 @@ import datetime
 from pymongo.errors import ServerSelectionTimeoutError
 import hashlib
 
-# config = configparser.ConfigParser()
-# config.read(os.path.abspath(os.path.join(".ini")))
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "for the night is dark and full of terrors"
 app.config["DEBUG"] = True
 app.config["MONGO_URI"] = os.environ["DB_URI"]
 
 try:
     mongo = PyMongo(app)
-    # MongoDB connection details (optional)
 except ServerSelectionTimeoutError as e:
     print("Could not connect to MongoDB:", e)
 
