@@ -79,10 +79,10 @@ def url_redirect(id):
                 {"url_identifier": url_id}, {"$inc": {"clicks": 1}}
             )
 
-        if "https://" in request.base_url:
-            return redirect(original_url, code=302)
-        else:
-            return redirect("https://" + original_url, code=302)
+        # if "https://" in request.base_url:
+        #     return redirect(original_url, code=302)
+        # else:
+        return redirect("https://" + original_url, code=302)
 
     flash("Invalid URL")
     return redirect(url_for("index"))
