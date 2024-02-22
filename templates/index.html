@@ -17,6 +17,6 @@
 
     {% if short_url %}
     <hr>
-    <a href="{{ short_url }}" class="short-url">{{ short_url }}</a>
+    <a href="{{ short_url }}" class="short-url">{% if '://' not in short_url %}http://{% endif %}{{ short_url }}</a>
     {% endif %}
 {% endblock %}
