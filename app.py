@@ -79,7 +79,7 @@ def url_redirect(id):
                 {"url_identifier": url_id}, {"$inc": {"clicks": 1}}
             )
 
-        return redirect("https://" + original_url, code=302)
+        return redirect(original_url, code=302)
 
     flash("Invalid URL")
     return redirect(url_for("index"))
