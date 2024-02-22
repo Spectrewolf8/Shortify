@@ -4,6 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+click = "*"
+colorama = "*"
+hashids = "*"
+itsdangerous = "*"
+jinja2 = "*"
+markupsafe = "*"
+werkzeug = "*"
+flask = "*"
+pymongo = {extras = ["srv"], version = "*"}
+flask-pymongo = "*"
 
 [dev-packages]
 
