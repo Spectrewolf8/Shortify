@@ -1,3 +1,12 @@
+## Shortify
+
+A URL shrinker that shrinks URLs for smaller lengths.
+
+### Variables
+`MONGO_URI`: From [cloud.mongodb.com](https://cloud.mongodb.com).
+
+<hr/>
+
 # Installation and set up
 
 Clone this repo into your machine.
@@ -22,3 +31,8 @@ python app.py
 <hr/>
 
 You can use the live demo deployed on [Vercel](https://shortifyv1.vercel.app/).
+
+<br/>
+<br/>
+
+``This project was a part of my internship, you are free to use the code.``
