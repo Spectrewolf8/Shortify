@@ -74,7 +74,7 @@ def url_redirect(id):
                 {"url_identifier": url_id}, {"$inc": {"clicks": 1}}
             )
 
-        if "https://" in original_url:
+        if "https://" in original_url or "http://" in original_url:
             return redirect(original_url, code=302)
         else:
             return redirect("https://" + original_url, code=302)
