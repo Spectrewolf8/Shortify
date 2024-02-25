@@ -1,8 +1,6 @@
 import base64
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flask_pymongo import PyMongo
-
-# import configparser
 import os
 import datetime
 from pymongo.errors import ServerSelectionTimeoutError
