@@ -1,6 +1,6 @@
 ## Shortify
 
-A URL shrinker that shrinks URLs for smaller lengths.
+A URL shrinker made in Flask(pyton) that shrinks URLs for smaller lengths.
 
 ### Variables
 `MONGO_URI`: From [cloud.mongodb.com](https://cloud.mongodb.com).
